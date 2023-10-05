@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Клиника</title>
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="../css/style.min.css" />
   </head>
   <body>
     <div class="container">
@@ -221,5 +221,5 @@
       </form>
     </div>
   </body>
-  <script type="module" src="./js/main.min.js"></script>
+  <script type="module" src="../js/main.min.js"></script>
 </html>
