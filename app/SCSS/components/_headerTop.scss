@@ -1,0 +1,136 @@
+.header__top {
+  min-height: 67px;
+
+  padding: 0 15%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header__left {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  .header__right {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    font-size: 16px;
+
+    .adress--mobile {
+      display: none;
+
+      @media screen and (max-width: 570px) {
+        display: block;
+        font-size: 13px;
+      }
+    }
+    @media screen and (max-width: 830px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+
+      .btn {
+        padding: 5px 8px;
+      }
+      @media screen and (max-width: 570px) {
+        align-items: end;
+        gap: 0;
+      }
+    }
+  }
+  .btn {
+    @media screen and (max-width: 570px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    padding: 0 5%;
+  }
+  @media screen and (max-width: 1300px) {
+    padding: 0 8%;
+  }
+  @media screen and (max-width: 570px) {
+    padding: 19px;
+  }
+}
+
+.burger {
+  display: none;
+
+  @media screen and (max-width: 570px) {
+    display: block;
+    height: 26px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span {
+      display: block;
+      content: '';
+
+      width: 37px;
+      height: 4px;
+
+      background-color: $navColor;
+      transition: all ease 0.5s;
+
+      transform-origin: center;
+    }
+    &.active {
+      span:nth-child(3) {
+        display: none;
+      }
+      span:nth-child(1) {
+        transform: rotate(45deg) translateY(15px);
+      }
+      span:nth-child(2) {
+        transform: rotate(-45deg) translateY(-15px);
+      }
+    }
+  }
+}
+.adress {
+  position: relative;
+  min-width: 10rem;
+
+  font-size: 14px;
+
+  .svg-placeholder-dims {
+    position: absolute;
+    left: -15%;
+    max-width: 30px;
+  }
+  .adress__city,
+  .adress__street {
+    display: block;
+  }
+  .adress__city {
+    color: #364844;
+  }
+  .adress__street {
+    color: #868686;
+  }
+  @media screen and (max-width: 570px) {
+    display: none;
+  }
+}
+.header__number {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  img {
+    @media screen and (max-width: 570px) {
+      display: none;
+    }
+  }
+
+  .number__text {
+    color: $colorText;
+    @media screen and (max-width: 570px) {
+      font-weight: 900;
+      min-width: 138px;
+    }
+  }
+}

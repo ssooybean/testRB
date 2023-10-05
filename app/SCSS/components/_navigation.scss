@@ -1,0 +1,70 @@
+.nav {
+  @media screen and (max-width: 570px) {
+    position: absolute;
+    z-index: 10;
+
+    height: 95vh;
+    width: 100vw;
+
+    transform: scaleY(0);
+
+    &.active {
+      transform: scaleY(100%);
+    }
+    transition: all ease 0.5s;
+  }
+}
+
+.nav__list {
+  list-style: none;
+
+  min-height: 43px;
+  padding: 0 15%;
+
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+
+  font-size: 16px;
+
+  background-color: $navColor;
+
+  .nav__item {
+    color: white;
+  }
+  .nav__item--btn {
+    display: none;
+  }
+  @media screen and (max-width: 1600px) {
+    padding: 0 5%;
+  }
+  @media screen and (max-width: 1300px) {
+    padding: 0 8%;
+  }
+  @media screen and (max-width: 570px) {
+    height: 100%;
+    padding: 0 19px;
+    padding-top: 48px;
+
+    flex-direction: column;
+    align-items: start;
+
+    background-color: $mobileNav;
+
+    .nav__item--btn {
+      display: block;
+
+      .btn {
+        background-color: #f6f6f6;
+        color: $navColor;
+        font-weight: 900;
+        font-size: 14px;
+
+        &:hover {
+          background-color: $btnActive;
+          color: white;
+        }
+      }
+    }
+  }
+}
