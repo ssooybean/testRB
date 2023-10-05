@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "app/*.php": {
+      "runtime": "vercel-php@0.5.0"
+    }
+  },
+  "routes": [
+    { "src": "/check", "dest": "/api/check.php" },
+    { "src": "/style.min.css", "dest": "/css/style.min.css" },
+    { "src": "/(.*)", "dest": "/app/index.php" }
+  ]
+}
