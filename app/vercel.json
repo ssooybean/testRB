@@ -6,8 +6,8 @@
   },
   "routes": [
     { "src": "/(.*)", "dest": "/api/index.php" },
-    { "src": "/send_email.php", "dest": "/api/send_email.php" },
-    { "src": "/style.min.css", "dest": "/css/style.min.css" },
-    { "src": "/main.min.js", "dest": "/js/main.min.js" }
+    { "src": "/send_email.php", "dest": "/api/api/send_email.php" },
+    { "src": "/style.min.css", "dest": "/api/css/style.min.css" },
+    { "src": "/main.min.js", "dest": "/api/js/main.min.js" }
   ]
 }
